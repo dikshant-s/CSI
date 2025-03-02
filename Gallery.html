@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | CSI CBIT</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center fw-bold text-primary">Instagram Gallery</h2>
+        <div id="instagram-gallery" class="row g-3 justify-content-center"></div>
+    </div>
+
+    <script>
+        const token = "YOUR_INSTAGRAM_ACCESS_TOKEN"; // 🔹 Replace this with your actual token
+        const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=${token}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let gallery = document.getElementById("instagram-gallery");
+                data.data.forEach(post => {
+                    if (post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM") {
+                        let imgDiv = document.createElement("div");
+                        imgDiv.className = "col-md-4 col-sm-6";
+                        imgDiv.innerHTML = `
+                            <div class="card border-0 shadow-sm">
+                                <a href="${post.permalink}" target="_blank">
+                                    <img src="${post.media_url}" class="card-img-top rounded" alt="Instagram Post">
+                                </a>
+                            </div>`;
+                        gallery.appendChild(imgDiv);
+                    }
+                });
+            })
+            .catch(error => console.log("Error fetching Instagram posts:", error));
+    </script>
+
+</body>
+</html>

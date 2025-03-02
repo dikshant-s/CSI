@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CSI CBIT</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="index-page">
+  <!-- ✅ New Top Header -->
+  <div class="top-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- College Logo on the Left -->
+      <div class="d-flex align-items-center">
+        <div class="college-logo me-3">
+          <img src="assets/img/topheaderimg.png" alt="College Logo">
+        </div>
+        <div class="csi-logo">
+          <img src="assets/img/logo.png" alt="CSI Logo" class="header-logo">
+        </div>
+      </div>
+
+      <!-- Contact Information and Notification Symbol on the Right -->
+      <div class="contact-info d-flex align-items-center">
+        <!-- Notification Icon with Dropdown -->
+        <div class="notification-container">
+          <div class="notification-icon" onclick="toggleNotifications()">
+            <i class="bi bi-bell"></i>
+          </div>
+
+          <!-- Notification Dropdown -->
+          <div class="notification-dropdown">
+            <ul id="notification-list">
+              <li>No new notifications</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/csihyderabadchapter/"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/csi_cbit_?igsh=ZjY2YTFoaTdteGU2" target="_blank"><i
+              class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Main Header -->
+  <header id="header" class="header d-flex align-items-center mt-1 fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <div class="container d-flex justify-content-between align-items-center">
+          <img src="assets/img/logo.png" alt="Logo" class="header-logo">
+          <h1 class="sitename">Computer Society of India</h1>
+        </div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" >Home</a></li>
+          <li><a href="#about" class="active">About Us</a></li>
+          <li><a href="/events.html" target="_blank">Events</a></li>
+          <li class="dropdown"><a href="#"><span>Members Area</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/AboutMembers.html" target="_blank">About Members</a></li>
+              <li><a href="/ExecutiveMembers.html" target="_blank">Executive Members</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Latest Info</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">News</a></li>
+              <li class="dropdown"><a href="#"><span>Gallery</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="/Gallery.html">Photos</a></li>
+                  <li><a href="#">Videos</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Publications</a></li>
+              <li><a href="#">Articles</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Sign Up</a> -->
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Image Slider Section -->
+    <section id="image-slider" class="image-slider section">
+      <div class="slideshow-container">
+        <div class="slides">
+          <img src="https://i.postimg.cc/pdjgMJfr/DSC02901.jpg" alt="Image 1">
+        </div>
+        <div class="slides">
+          <img src="https://i.postimg.cc/d1pbbNXh/DSC02819.jpg" alt="Image 2">
+        </div>
+        <div class="slides">
+          <img src="https://i.postimg.cc/Sx6vZxkY/DSC02865.jpg" alt="Image 3">
+        </div>
+        <div class="slides">
+          <img src="https://i.postimg.cc/GhpVmCFZ/DSC02891.jpg" alt="Image 4">
+        </div>
+        <div class="slides">
+          <img src="https://i.postimg.cc/VsFPNg3b/DSC02609.jpg" alt="Image 5">
+        </div>
+        <div class="slides">
+          <img src="https://i.postimg.cc/CMPrmW0s/DSC02645.jpg" alt="Image 6">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+            <h1 class="mb-4">
+              Chaitanya Bharathi Institute Of Technology<br>
+              <span class="accent-text">Hyderabad Chapter 1</span>
+            </h1>
+            <p class="mb-4 mb-md-5">
+              "Welcome to CSI - The Computer Society of India, CBIT!
+              Empowering innovators, fostering technology, and shaping the future of computing!"
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Learn More</a>
+              <a href="#join-csi" class="btn btn-primary me-0 me-sm-2 mx-1">Join Us</a>
+              <a href="https://youtu.be/icB4mqrknnE?si=WPtjDkOhYTAXbPum" class="btn btn-link mt-2 mt-sm-0 glightbox">
+                <i class="bi bi-play-circle me-1"></i>
+                Play Video
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+            <img src="assets/img/logo.png" alt="Hero Image" class="img-fluid">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-container mt-5">  <!-- Added margin-top -->
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                        <div class="stat-icon"><i class="bi bi-calendar-event"></i></div>
+                        <div class="stat-content">
+                            <h4 class="text-dark event-text">ThinkTechTrivia – The Ultimate Technical Quiz!</h4>
+                            <p class="mb-0 text-muted">Date: 4th March 2025</p>
+                            <p class="mb-0 text-muted">Timings : 10:00AM - 12:00PM</p>
+                            <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="swiper-slide">
+                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                        <div class="stat-icon"><i class="bi bi-lightbulb"></i></div>
+                        <div class="stat-content">
+                            <h4 class="text-dark event-text">Solve-o-Fast – Decode, Dominate, Win!</h4>
+                            <p class="mb-0 text-muted">Date: 4th March 2025</p>
+                            <p class="mb-0 text-muted">Timings : 2:00PM - 4:00PM</p>
+                            <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="swiper-slide">
+                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                        <div class="stat-icon"><i class="bi bi-puzzle"></i></div>
+                        <div class="stat-content">
+                            <h4 class="text-dark event-text">Backstabber.exe – Code, Deceive, Survive!</h4>
+                            <p class="mb-0 text-muted">Date: 5th March 2025</p>
+                            <p class="mb-0 text-muted">Timings : 10:00AM - 12:00PM</p>
+                            <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="swiper-slide">
+                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                        <div class="stat-icon"><i class="bi bi-trophy"></i></div>
+                        <div class="stat-content">
+                            <h4 class="text-dark event-text">Cybersecurity Workshop</h4>
+                            <p class="mb-0 text-muted">March 25</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="swiper-slide">
+                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                        <div class="stat-icon"><i class="bi bi-gear"></i></div>
+                        <div class="stat-content">
+                            <h4 class="text-dark event-text">AI & ML Bootcamp</h4>
+                            <p class="mb-0 text-muted">April 5</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+        </div>
+    
+        <!-- Swiper Pagination & Navigation -->
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+    </div>
+
+    </div>
+
+  </section><!-- /Hero Section -->
+
+
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4 align-items-center justify-content-between">
+
+        <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="about-title">About Us</h2>
+          <p class="about-description">The Computer Society of India (CSI) is the largest and most professionally
+            managed association of IT professionals in India. Established in 1965, CSI has been instrumental in guiding
+            the Indian IT industry down the right path since its formative years.</p>
+
+          <div class="row feature-list-wrapper">
+            <div class="col-md-6">
+              <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Promoting IT as a profession</li>
+                <li><i class="bi bi-check-circle-fill"></i> Facilitating research and knowledge sharing</li>
+                <li><i class="bi bi-check-circle-fill"></i> Organizing conferences and seminars</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Providing networking opportunities</li>
+                <li><i class="bi bi-check-circle-fill"></i> Encouraging student participation</li>
+                <li><i class="bi bi-check-circle-fill"></i> Recognizing excellence in IT</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-wrapper">
+            <div class="row gy-4">
+              <div class="col-lg-5">
+                <div class="profile d-flex align-items-center gap-3">
+                  <img src="assets/img/" alt="CSI President" class="profile-image">
+                  <div>
+                    <h4 class="profile-name">Hrishik Reddy</h4>
+                    <p class="profile-position">President, CSI</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="contact-info d-flex align-items-center gap-2">
+                  <i class="bi bi-telephone-fill"></i>
+                  <div>
+                    <p class="contact-label">Call us anytime</p>
+                    <p class="contact-number">+91 12345 67890</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="image-wrapper">
+            <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+              <img src="https://i.postimg.cc/Sx6vZxkY/DSC02865.jpg" alt="CSI Event"
+                class="img-fluid main-image rounded-4">
+
+            </div>
+            <div class="experience-badge floating">
+              <h3>Hyderabad <span>Chapter 1</span></h3>
+              <p>Let's Begin our Journey with IT world</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="join-csi" class="join-csi section light-background">
+
+
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Join <span style="color: #1C4EFB;">CSI Chapter</span></h2>
+      <p>Be part of the largest technical student chapter. Enhance your skills, network with professionals, and shape
+        your future in technology.</p>
+    </div>
+
+    <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+      <a href="https://forms.gle/t27DzD1qKoeu4m1S9" class="btn btn-primary"
+        style="background-color: #1C4EFB; padding: 12px 24px; border-radius: 5px; font-size: 18px;" target="_blank"
+        rel="noopener noreferrer">
+        Become a Member!
+      </a>
+    </div>
+
+
+    <div class="container mt-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="row g-4 text-center">
+
+        <div class="col-lg-4">
+          <div class="stats-card">
+            <h3>0</h3>
+            <p>Members</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="stats-card">
+            <h3>0</h3>
+            <p>Events</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="stats-card">
+            <h3>0</h3>
+            <p>Alumni Network</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container text-center " data-aos="fade-up">
+      <h2 class="fw-bold">Membership Benefits</h2>
+    </div>
+
+    <div class="container mt-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-4">
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+            <i class="bi bi-calendar-event display-6 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Exclusive Events</h5>
+            <p class="text-secondary">Access workshops, hackathons, and conferences to enhance your knowledge.</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+            <i class="bi bi-people display-6 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Networking Opportunities</h5>
+            <p class="text-secondary">Connect with professionals, mentors, and peers in the tech industry.</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+            <i class="bi bi-lightbulb display-6 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Skill Development</h5>
+            <p class="text-secondary">Gain hands-on experience and improve both technical and soft skills.</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+            <i class="bi bi-briefcase display-6 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Career Growth</h5>
+            <p class="text-secondary">Leverage CSI’s industry connections for internships and job opportunities.</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+            <i class="bi bi-book display-6 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Community Outreach</h5>
+            <p class="text-secondary">Participate in initiatives that promote tech education and digital literacy.</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+            <i class="bi bi-award display-6 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Professional Recognition</h5>
+            <p class="text-secondary">Earn certificates and awards to boost your resume and profile.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- /Pricing Section -->
+
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-5">
+          <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+            <h3>Contact Info</h3>
+            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="content">
+                <h4>Our Location</h4>
+                <p>A108 Adam Street</p>
+                <p>New York, NY 535022</p>
+              </div>
+            </div>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="content">
+                <h4>Phone Number</h4>
+                <p>+1 5589 55488 55</p>
+                <p>+1 6678 254445 41</p>
+              </div>
+            </div>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="content">
+                <h4>Email Address</h4>
+                <p>info@example.com</p>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+            <h3>Get In Touch</h3>
+            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit" class="btn">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row d-flex justify-content-start gy-4">
+        <div class="col-lg-4 col-md-6 footer-about ml me-auto">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Computer Society Of India</span>
+          </a>
+          <div class="footer-contact pt-3 ">
+            <p>Computer Society of India - CBIT Student Chapter is committed to the advancement of theory and practice
+              of Computer Engineering and Technology Systems.</p>
+
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9876543210</span></p>
+            <p><strong>Email:</strong> <span>csi@cbit.org.in</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/csi_cbit_?igsh=ZjY2YTFoaTdteGU2"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/csihyderabadchapter/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#latest-info">Latest Info</a></li>
+            <li><a href="#join-csi">Membership</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">CSI CBIT</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="#">CSI Students</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1, 
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 2500,  // Moves automatically every 2.5 seconds
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            576: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+        }
+    });
+</script>
+
+</body>
+
+</html>
