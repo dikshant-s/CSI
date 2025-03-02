@@ -39,44 +39,45 @@
   <!-- ✅ New Top Header -->
   <div class="top-header">
     <div class="container d-flex justify-content-between align-items-center">
-        <!-- Left Side: College Logo -->
-        <div class="d-flex align-items-center">
-            <div class="college-logo me-3">
-                <img src="assets/img/logo.jpg" alt="College Logo" class="img-fluid">
-            </div>
-            <div class="csi-logo">
-                <img src="assets/img/logo.png" alt="CSI Logo" class="header-logo img-fluid">
-            </div>
+      <!-- Left Side: College Logo -->
+      <div class="d-flex align-items-center">
+        <div class="college-logo me-3">
+          <img src="assets/img/topheaderimg.png" alt="College Logo" class="img-fluid">
+        </div>
+        <div class="csi-logo">
+          <img src="assets/img/logo.png" alt="CSI Logo" class="header-logo img-fluid">
+        </div>
+      </div>
+
+      <!-- Right Side: Icons (Notification & Social Media) -->
+      <div class="contact-info d-flex align-items-center ms-auto">
+        <!-- Notification Icon -->
+        <div class="notification-container me-3">
+          <div class="notification-icon" onclick="toggleNotifications()">
+            <i class="bi bi-bell"></i>
+          </div>
+          <!-- Notification Dropdown -->
+          <div class="notification-dropdown">
+            <ul id="notification-list">
+              <li>No new notifications</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Right Side: Icons (Notification & Social Media) -->
-        <div class="contact-info d-flex align-items-center ms-auto">
-            <!-- Notification Icon -->
-            <div class="notification-container me-3">
-                <div class="notification-icon" onclick="toggleNotifications()">
-                    <i class="bi bi-bell"></i>
-                </div>
-                <!-- Notification Dropdown -->
-                <div class="notification-dropdown">
-                    <ul id="notification-list">
-                        <li>No new notifications</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Social Media Links -->
-            <div class="social-links d-flex">
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.linkedin.com/company/csihyderabadchapter/"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.instagram.com/csi_cbit_?igsh=ZjY2YTFoaTdteGU2" target="_blank"><i class="bi bi-instagram"></i></a>
-            </div>
+        <!-- Social Media Links -->
+        <div class="social-links d-flex">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/csihyderabadchapter/"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/csi_cbit_?igsh=ZjY2YTFoaTdteGU2" target="_blank"><i
+              class="bi bi-instagram"></i></a>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
   <!-- ✅ Main Header -->
-  <header id="header" class="header d-flex align-items-center mt-1 fixed-top">
+  <header id="header" class="header d-flex align-items-center mt-0 fixed-top">
     <div
       class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -88,13 +89,13 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" >Home</a></li>
-          <li><a href="#about" class="active">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
           <li><a href="events.html" target="_blank">Events</a></li>
           <li class="dropdown"><a href="#"><span>Members Area</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="AboutMembers.html" target="_blank">About Members</a></li>
+              <li><a href="AboutMembers.html">About Members</a></li>
               <li><a href="ExecutiveMembers.html" target="_blank">Executive Members</a></li>
             </ul>
           </li>
@@ -105,7 +106,7 @@
               <li class="dropdown"><a href="#"><span>Gallery</span> <i
                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="/Gallery.html">Photos</a></li>
+                  <li><a href="#">Photos</a></li>
                   <li><a href="#">Videos</a></li>
                 </ul>
               </li>
@@ -113,7 +114,7 @@
               <li><a href="#">Articles</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -200,82 +201,82 @@
         </div>
       </div>
 
-      <div class="swiper-container mt-5">  <!-- Added margin-top -->
+      <div class="swiper-container mt-5"> <!-- Added margin-top -->
         <div class="swiper-wrapper">
-            
-            <div class="swiper-slide">
-                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
-                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
-                        <div class="stat-icon"><i class="bi bi-calendar-event"></i></div>
-                        <div class="stat-content">
-                            <h4 class="text-dark event-text">ThinkTechTrivia – The Ultimate Technical Quiz!</h4>
-                            <p class="mb-0 text-muted">Date: 4th March 2025</p>
-                            <p class="mb-0 text-muted">Timings : 10:00AM - 12:00PM</p>
-                            <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-    
-            <div class="swiper-slide">
-                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
-                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
-                        <div class="stat-icon"><i class="bi bi-lightbulb"></i></div>
-                        <div class="stat-content">
-                            <h4 class="text-dark event-text">Solve-o-Fast – Decode, Dominate, Win!</h4>
-                            <p class="mb-0 text-muted">Date: 4th March 2025</p>
-                            <p class="mb-0 text-muted">Timings : 2:00PM - 4:00PM</p>
-                            <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-    
-            <div class="swiper-slide">
-                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
-                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
-                        <div class="stat-icon"><i class="bi bi-puzzle"></i></div>
-                        <div class="stat-content">
-                            <h4 class="text-dark event-text">Backstabber.exe – Code, Deceive, Survive!</h4>
-                            <p class="mb-0 text-muted">Date: 5th March 2025</p>
-                            <p class="mb-0 text-muted">Timings : 10:00AM - 12:00PM</p>
-                            <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-    
-            <div class="swiper-slide">
-                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
-                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
-                        <div class="stat-icon"><i class="bi bi-trophy"></i></div>
-                        <div class="stat-content">
-                            <h4 class="text-dark event-text">Cybersecurity Workshop</h4>
-                            <p class="mb-0 text-muted">March 25</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-    
-            <div class="swiper-slide">
-                <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
-                    <div class="p-4 shadow rounded border border-light bg-white event-hover">
-                        <div class="stat-icon"><i class="bi bi-gear"></i></div>
-                        <div class="stat-content">
-                            <h4 class="text-dark event-text">AI & ML Bootcamp</h4>
-                            <p class="mb-0 text-muted">April 5</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-    
+
+          <div class="swiper-slide">
+            <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+              <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                <div class="stat-icon"><i class="bi bi-calendar-event"></i></div>
+                <div class="stat-content">
+                  <h4 class="text-dark event-text">ThinkTechTrivia – The Ultimate Technical Quiz!</h4>
+                  <p class="mb-0 text-muted">Date: 4th March 2025</p>
+                  <p class="mb-0 text-muted">Timings : 10:00AM - 12:00PM</p>
+                  <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+              <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                <div class="stat-icon"><i class="bi bi-lightbulb"></i></div>
+                <div class="stat-content">
+                  <h4 class="text-dark event-text">Solve-o-Fast – Decode, Dominate, Win!</h4>
+                  <p class="mb-0 text-muted">Date: 4th March 2025</p>
+                  <p class="mb-0 text-muted">Timings : 2:00PM - 4:00PM</p>
+                  <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+              <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                <div class="stat-icon"><i class="bi bi-puzzle"></i></div>
+                <div class="stat-content">
+                  <h4 class="text-dark event-text">Backstabber.exe – Code, Deceive, Survive!</h4>
+                  <p class="mb-0 text-muted">Date: 5th March 2025</p>
+                  <p class="mb-0 text-muted">Timings : 10:00AM - 12:00PM</p>
+                  <p class="mb-0 text-muted">L BLOCK IT LAB 4</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+              <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                <div class="stat-icon"><i class="bi bi-trophy"></i></div>
+                <div class="stat-content">
+                  <h4 class="text-dark event-text">Cybersecurity Workshop</h4>
+                  <p class="mb-0 text-muted">March 25</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="https://forms.gle/zmpYxURAFGwQk3XBA" target="_blank" class="text-decoration-none">
+              <div class="p-4 shadow rounded border border-light bg-white event-hover">
+                <div class="stat-icon"><i class="bi bi-gear"></i></div>
+                <div class="stat-content">
+                  <h4 class="text-dark event-text">AI & ML Bootcamp</h4>
+                  <p class="mb-0 text-muted">April 5</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
-    
+
         <!-- Swiper Pagination & Navigation -->
         <div class="swiper-pagination"></div>
         <!-- <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div> -->
-    </div>
+      </div>
 
     </div>
 
@@ -468,102 +469,102 @@
 
   </section><!-- /Pricing Section -->
 
-  
+
 
   <!-- Contact Section -->
   <section id="contact" class="contact section light-background">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <h2>Contact</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row g-4 g-lg-5">
-            <div class="col-lg-5">
-                <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Contact Info</h3>
-                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-5">
+          <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+            <h3>Contact Info</h3>
+            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
 
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon-box">
-                            <i class="bi bi-geo-alt"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Our Location</h4>
-                            <p>A108 Adam Street</p>
-                            <p>New York, NY 535022</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="400">
-                        <div class="icon-box">
-                            <i class="bi bi-telephone"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Phone Number</h4>
-                            <p>+1 5589 55488 55</p>
-                            <p>+1 6678 254445 41</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="500">
-                        <div class="icon-box">
-                            <i class="bi bi-envelope"></i>
-                        </div>
-                        <div class="content">
-                            <h4>Email Address</h4>
-                            <p>info@example.com</p>
-                            <p>contact@example.com</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="content">
+                <h4>Our Location</h4>
+                <p>A108 Adam Street</p>
+                <p>New York, NY 535022</p>
+              </div>
             </div>
 
-            <div class="col-lg-7">
-                <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Get In Touch</h3>
-                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
-
-                    <form id="contact-form" onsubmit="sendEmail(event)">
-                        <div class="row gy-4">
-
-                            <div class="col-md-6">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-                            </div>
-
-                            <div class="col-md-6">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-
-                            <div class="col-12">
-                                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
-                            </div>
-
-                            <div class="col-12">
-                                <textarea id="message" class="form-control" rows="6" placeholder="Message" required></textarea>
-                            </div>
-
-                            <div class="col-12 text-center">
-                                <p id="status-message" style="color: green; display: none;">Your message has been sent. Thank you!</p>
-                                <button type="submit" class="btn">Send Message</button>
-                            </div>
-
-                        </div>
-                    </form>
-
-                </div>
+            <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="content">
+                <h4>Phone Number</h4>
+                <p>+1 5589 55488 55</p>
+                <p>+1 6678 254445 41</p>
+              </div>
             </div>
 
+            <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="content">
+                <h4>Email Address</h4>
+                <p>info@example.com</p>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="col-lg-7">
+          <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+            <h3>Get In Touch</h3>
+            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+
+            <form id="contact-form" onsubmit="sendEmail(event)">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-12">
+                  <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                </div>
+
+                <div class="col-12">
+                  <textarea id="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <p id="status-message" style="color: green; display: none;">Your message has been sent. Thank you!</p>
+                  <button type="submit" class="btn">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
-<!-- /Contact Section -->
+  <!-- /Contact Section -->
 
   </main>
 
@@ -637,53 +638,53 @@
   <script src="assets/js/main.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1, 
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-            delay: 2500,  // Moves automatically every 2.5 seconds
-            disableOnInteraction: false
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            576: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-        }
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 2500,  // Moves automatically every 2.5 seconds
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
     });
-</script>
+  </script>
 
-<!-- EmailJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-    (function() {
-        emailjs.init("wOfm_MLuysegSp3A6"); // 🔹 Replace with your EmailJS Public Key
+  <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("wOfm_MLuysegSp3A6"); // 🔹 Replace with your EmailJS Public Key
     })();
 
     function sendEmail(event) {
-        event.preventDefault();
+      event.preventDefault();
 
-        const formData = {
-            to_name: "Admin",
-            from_name: document.getElementById("name").value,
-            from_email: document.getElementById("email").value,
-            subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value
-        };
+      const formData = {
+        to_name: "Admin",
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+      };
 
-        emailjs.send("service_0gswjo4", "template_opmimr1", formData)
-            .then(response => {
-                document.getElementById("status-message").style.display = "block";
-                document.getElementById("contact-form").reset();
-            })
-            .catch(error => {
-                alert("Error sending email. Please try again.");
-            });
+      emailjs.send("service_0gswjo4", "template_opmimr1", formData)
+        .then(response => {
+          document.getElementById("status-message").style.display = "block";
+          document.getElementById("contact-form").reset();
+        })
+        .catch(error => {
+          alert("Error sending email. Please try again.");
+        });
     }
-</script>
+  </script>
 
 
 
