@@ -39,42 +39,41 @@
   <!-- ✅ New Top Header -->
   <div class="top-header">
     <div class="container d-flex justify-content-between align-items-center">
-      <!-- College Logo on the Left -->
-      <div class="d-flex align-items-center">
-        <div class="college-logo me-3">
-          <img src="assets/img/topheaderimg.png" alt="College Logo">
-        </div>
-        <div class="csi-logo">
-          <img src="assets/img/logo.png" alt="CSI Logo" class="header-logo">
-        </div>
-      </div>
-
-      <!-- Contact Information and Notification Symbol on the Right -->
-      <div class="contact-info d-flex align-items-center">
-        <!-- Notification Icon with Dropdown -->
-        <div class="notification-container">
-          <div class="notification-icon" onclick="toggleNotifications()">
-            <i class="bi bi-bell"></i>
-          </div>
-
-          <!-- Notification Dropdown -->
-          <div class="notification-dropdown">
-            <ul id="notification-list">
-              <li>No new notifications</li>
-            </ul>
-          </div>
+        <!-- Left Side: College Logo -->
+        <div class="d-flex align-items-center">
+            <div class="college-logo me-3">
+                <img src="assets/img/topheaderimg.png" alt="College Logo" class="img-fluid">
+            </div>
+            <div class="csi-logo">
+                <img src="assets/img/logo.png" alt="CSI Logo" class="header-logo img-fluid">
+            </div>
         </div>
 
-        <!-- Social Media Links -->
-        <div class="social-links">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.linkedin.com/company/csihyderabadchapter/"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.instagram.com/csi_cbit_?igsh=ZjY2YTFoaTdteGU2" target="_blank"><i
-              class="bi bi-instagram"></i></a>
+        <!-- Right Side: Icons (Notification & Social Media) -->
+        <div class="contact-info d-flex align-items-center ms-auto">
+            <!-- Notification Icon -->
+            <div class="notification-container me-3">
+                <div class="notification-icon" onclick="toggleNotifications()">
+                    <i class="bi bi-bell"></i>
+                </div>
+                <!-- Notification Dropdown -->
+                <div class="notification-dropdown">
+                    <ul id="notification-list">
+                        <li>No new notifications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-links d-flex">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/csihyderabadchapter/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/csi_cbit_?igsh=ZjY2YTFoaTdteGU2" target="_blank"><i class="bi bi-instagram"></i></a>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+
 
   <!-- ✅ Main Header -->
   <header id="header" class="header d-flex align-items-center mt-1 fixed-top">
