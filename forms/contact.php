@@ -1,41 +1,47 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST["name"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $subject = htmlspecialchars($_POST["subject"]);
+    $message = htmlspecialchars($_POST["message"]);
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+    $sendgrid_api_key = "YOUR_SENDGRID_API_KEY";
+    $template_id = "YOUR_TEMPLATE_ID";
+    $recipient = "your-email@example.com"; // Replace with your actual email
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+    $email_data = [
+        "personalizations" => [
+            [
+                "to" => [["email" => $recipient]],
+                "dynamic_template_data" => [
+                    "name" => $name,
+                    "email" => $email,
+                    "subject" => $subject,
+                    "message" => $message
+                ]
+            ]
+        ],
+        "from" => ["email" => "your-sendgrid-verified-email@example.com"],
+        "template_id" => $template_id
+    ];
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://api.sendgrid.com/v3/mail/send");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($email_data));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "Authorization: Bearer $sendgrid_api_key",
+        "Content-Type: application/json"
+    ]);
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+    $response = curl_exec($ch);
+    curl_close($ch);
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+    if ($response) {
+        echo "success";
+    } else {
+        echo "error";
+    }
+}
 ?>
