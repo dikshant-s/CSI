@@ -99,8 +99,8 @@
               <li><a href="ExecutiveMembers.html" target="_blank">Executive Members</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Latest Info</span> <i
-                class="bi bi-chevron-down toggle-dropdown" id="latest-info"></i></a>
+          <li class="dropdown"><a href="#"><span>Latest Info</span> <i class="bi bi-chevron-down toggle-dropdown"
+                id="latest-info"></i></a>
             <ul>
               <li><a href="news.html">News</a></li>
               <li class="dropdown"><a href="#"><span>Gallery</span> <i
@@ -360,46 +360,40 @@
 
   <section id="join-csi" class="join-csi section light-background">
 
-
-    <div class="container section-title" data-aos="fade-up">
+    <div class="container section-title text-center" data-aos="fade-up">
       <h2>Join <span style="color: #1C4EFB;">CSI Chapter</span></h2>
       <p>Be part of the largest technical student chapter. Enhance your skills, network with professionals, and shape
         your future in technology.</p>
     </div>
 
     <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-      <a href="https://forms.gle/t27DzD1qKoeu4m1S9" class="btn btn-primary"
-        style="background-color: #1C4EFB; padding: 12px 24px; border-radius: 5px; font-size: 18px;" target="_blank"
-        rel="noopener noreferrer">
+      <a href="https://forms.gle/t27DzD1qKoeu4m1S9" class="btn btn-primary" target="_blank">
         Become a Member!
       </a>
     </div>
 
-
     <div class="container mt-4" data-aos="fade-up" data-aos-delay="200">
       <div class="row g-4 text-center">
-
         <div class="col-lg-4">
-          <div class="stats-card">
-            <h3>114</h3>
+          <div class="card p-4 border-0 shadow-sm">
+            <h3 id="member-count">1</h3>
             <p>Members</p>
           </div>
         </div>
 
         <div class="col-lg-4">
-          <div class="stats-card">
+          <div class="card p-4 border-0 shadow-sm">
             <h3>0</h3>
             <p>Events</p>
           </div>
         </div>
 
         <div class="col-lg-4">
-          <div class="stats-card">
+          <div class="card p-4 border-0 shadow-sm">
             <h3>0</h3>
             <p>Alumni Network</p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -466,6 +460,72 @@
 
       </div>
     </div>
+
+  </section>
+
+  <div class="container text-center " data-aos="fade-up">
+    <h2 class="fw-bold">Membership Benefits</h2>
+  </div>
+
+  <div class="container mt-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
+
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+          <i class="bi bi-calendar-event display-6 text-primary"></i>
+          <h5 class="mt-3 fw-bold">Exclusive Events</h5>
+          <p class="text-secondary">Access workshops, hackathons, and conferences to enhance your knowledge.</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+          <i class="bi bi-people display-6 text-primary"></i>
+          <h5 class="mt-3 fw-bold">Networking Opportunities</h5>
+          <p class="text-secondary">Connect with professionals, mentors, and peers in the tech industry.</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+          <i class="bi bi-lightbulb display-6 text-primary"></i>
+          <h5 class="mt-3 fw-bold">Skill Development</h5>
+          <p class="text-secondary">Gain hands-on experience and improve both technical and soft skills.</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+          <i class="bi bi-briefcase display-6 text-primary"></i>
+          <h5 class="mt-3 fw-bold">Career Growth</h5>
+          <p class="text-secondary">Leverage CSI’s industry connections for internships and job opportunities.</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+          <i class="bi bi-book display-6 text-primary"></i>
+          <h5 class="mt-3 fw-bold">Community Outreach</h5>
+          <p class="text-secondary">Participate in initiatives that promote tech education and digital literacy.</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6">
+        <div class="card text-center p-4 border-0 shadow-sm" style="background-color: #ccdcf3;">
+          <i class="bi bi-award display-6 text-primary"></i>
+          <h5 class="mt-3 fw-bold">Professional Recognition</h5>
+          <p class="text-secondary">Earn certificates and awards to boost your resume and profile.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   </section><!-- /Pricing Section -->
 
@@ -686,7 +746,32 @@
     }
   </script>
 
+  <script>
+    const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTgeUdrrHOKV-n3L8dFj44Yz1mx5d_JPdk6QiD4kBq2fy8gc09ITR2Dxcy60dfFc_6Bk9xoojoI3XeK/pub?output=csv";
 
+    function updateMemberCount() {
+      fetch(sheetURL)
+        .then(response => response.text())
+        .then(csvText => {
+          console.log("CSV Data:", csvText); // Debugging
+
+          let rows = csvText.split("\n"); // Split CSV by new lines
+          let validRows = rows.filter(row => row.trim().length > 0); // Remove empty rows
+
+          let memberCount = validRows.length - 1; // Exclude header
+
+          console.log("Final Member Count:", memberCount); // Debugging output
+
+          if (memberCount > 0) {
+            document.getElementById("member-count").textContent = memberCount;
+          }
+        })
+        .catch(error => console.error("Error fetching member count:", error));
+    }
+
+    // Call function when page loads
+    updateMemberCount();
+  </script>
 
 </body>
 
