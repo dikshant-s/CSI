@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve - O - Fast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 40px);
+            gap: 5px;
+            justify-content: center;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border: 1px solid black;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        .empty {
+            border: none;
+            background: transparent;
+        }
+        .correct {
+            background-color: lightgreen;
+        }
+        .incorrect {
+            background-color: lightcoral;
+        }
+        #timer {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: red;
+        }
+        #hint-section {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        #secret-word-section {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Solve - O - Fast</h2>
+    
+    <div id="login-section">
+        <p>Please enter your name to start the crossword.</p>
+        <input type="text" id="username" class="form-control w-25 mx-auto" placeholder="Enter your name">
+        <button class="btn btn-primary mt-2" onclick="loginUser()">Start</button>
+    </div>
+    
+    <div id="puzzle-section" style="display: none;">
+        <h4>Welcome, <span id="user-display"></span>!</h4>
+        <p id="timer">Time Left: <span id="time-display">03:00</span></p>
+        <div class="grid" id="crossword-grid"></div>
+        <button class="btn btn-success mt-3" onclick="checkAnswers()">Submit Answers</button>
+        <button class="btn btn-info mt-3" onclick="showHint()">Show Hint</button>
+        
+        <div id="hint-section">
+            <h5>Hint:</h5>
+            <p id="hint-text"></p>
+        </div>
+    </div>
+
+    <div id="secret-word-section">
+        <h3>Secret Word Challenge</h3>
+        <p><strong>Timer Running: <span id="equation-timer"></span></strong></p>
+        <p>Solve the equation and find the secret word:</p>
+        <p><strong>6[0] + 5[3] + 2[2] + 1[0] + 6[3] + 6[2] + 4[0] + 1[6]</strong></p>
+        <input type="text" id="secret-word" class="form-control w-50 mx-auto" placeholder="Enter the secret word">
+        <button class="btn btn-primary mt-2" onclick="checkSecretWord()">Submit Answer</button>
+    </div>
+
+    <script>
+        let timer;
+        let totalTime = 300; // 5 minutes in seconds
+        let gameStarted = false;
+        let startTime;
+
+        const hints = {
+            crossword: "Solve 1, 3, 4 first, and you may find a hint.",
+            question5: "Synonym for 'Orie'.",
+            question6: "My size should be fixed in Java but dynamic in Python.",
+            question7: "ChatGPT, deep Gemini, up + Y (Aptitude).",
+            question8: "(10 + n + 2√10n)(√10 + √n) / (√10 + √n) + n"
+        };
+
+        const correctAnswers = [
+            [null, null, "S", null, null, null, null, null],
+            [null, "Q", "P", "N", "A", "Y", "M", null],
+            [null, null, "E", null, null, null, null, null],
+            [null, null, "A", null, null, null, null, null]
+        ];
+
+        function loginUser() {
+            let username = document.getElementById('username').value.trim();
+            if (username === "") {
+                alert("Please enter your name.");
+                return;
+            }
+            localStorage.setItem("username", username);
+            document.getElementById('user-display').innerText = username;
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('puzzle-section').style.display = 'block';
+
+            if (!gameStarted) {
+                startGameTimer();
+                gameStarted = true;
+            }
+        }
+
+        function startGameTimer() {
+            startTime = Date.now();
+            timer = setInterval(() => {
+                let elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+                let remainingTime = Math.max(totalTime - elapsedTime, 0);
+
+                let minutes = Math.floor(remainingTime / 60);
+                let seconds = remainingTime % 60;
+                document.getElementById('time-display').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                document.getElementById('equation-timer').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                
+                if (remainingTime === 0) {
+                    clearInterval(timer);
+                    alert("Time is up! The game will reset.");
+                    location.reload();
+                }
+            }, 1000);
+        }
+
+        function showHint() {
+            document.getElementById("hint-section").style.display = "block";
+            document.getElementById("hint-text").textContent = hints.crossword;
+        }
+
+        function createCrosswordGrid() {
+            const grid = document.getElementById('crossword-grid');
+            grid.innerHTML = "";
+            for (let row = 0; row < correctAnswers.length; row++) {
+                for (let col = 0; col < correctAnswers[row].length; col++) {
+                    if (correctAnswers[row][col]) {
+                        let cell = document.createElement("input");
+                        cell.classList.add("cell");
+                        cell.setAttribute("maxlength", "1");
+                        cell.setAttribute("data-pos", `${row}-${col}`);
+                        grid.appendChild(cell);
+                    } else {
+                        let emptyCell = document.createElement("div");
+                        emptyCell.classList.add("cell", "empty");
+                        grid.appendChild(emptyCell);
+                    }
+                }
+            }
+        }
+
+        function checkAnswers() {
+            let allCorrect = true;
+            document.querySelectorAll('.cell').forEach(cell => {
+                if (!cell.classList.contains("empty")) {
+                    const [row, col] = cell.getAttribute("data-pos").split('-').map(Number);
+                    if (cell.value.toUpperCase() === correctAnswers[row][col]) {
+                        cell.classList.add("correct");
+                        cell.classList.remove("incorrect");
+                    } else {
+                        cell.classList.add("incorrect");
+                        cell.classList.remove("correct");
+                        allCorrect = false;
+                    }
+                }
+            });
+
+            if (allCorrect) {
+                document.getElementById("puzzle-section").style.display = "none";
+                document.getElementById("secret-word-section").style.display = "block";
+                alert("Correct! Now solve the next challenge.");
+            } else {
+                alert("Some answers are incorrect. Try again.");
+            }
+        }
+
+        createCrosswordGrid();
+    </script>
+</body>
+</html>
